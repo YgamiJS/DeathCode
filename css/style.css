@@ -42,8 +42,12 @@ textarea{
     transition-duration:500ms;
     color: white;
 }
-span textarea{
-    animation: write 4s steps(40) 1s 1 normal  both , textCursor 500ms steps(40) infinite  normal;
+textarea::-webkit-scrollbar{
+    background-color: #30363d;
+}
+textarea::-webkit-scrollbar-thumb{
+    background-color: #1e232a;
+    border-radius: 8px;
 }
 textarea::after{
     counter-increment: section;                 /* Инкрементирует счётчик*/
