@@ -1,0 +1,160 @@
+body{
+    background-color: #21262d;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    overflow: auto;
+    overflow-x: hidden;
+    counter-reset: section;
+}
+a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+header{
+    border-bottom-style: 3px solid #30363d;
+    margin: 0px 0px 10px 0px;
+    background-color: #1e232a;
+    box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.2);
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+.logo{
+    position: absolute;
+}
+.Choice_In{
+    position: relative;
+    margin: 10px 5px 45px 5px;
+    display: inline-flex;
+}
+textarea{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50% , -50%);
+    resize:none;
+    border-radius: 5px;
+    background-color: #30363d;
+    padding:5px;
+    transition: all;
+    transition-timing-function: ease;
+    transition-duration:500ms;
+    color: white;
+}
+span textarea{
+    animation: write 4s steps(40) 1s 1 normal  both , textCursor 500ms steps(40) infinite  normal;
+}
+textarea::after{
+    counter-increment: section;                 /* Инкрементирует счётчик*/
+    content: "Секция " counter(section) ": ";
+}
+textarea:focus{
+    background-color: #0d1117;
+    color:white;
+}
+section button{
+    margin: 0px;
+    padding: 5px;
+    background-color: #238636;
+    border-radius: 5px;
+    border: 1px solid #238636;
+    transition: all;
+    transition-timing-function: ease;
+    transition-duration:500ms;
+    color:white;
+    position: absolute;
+}
+section button:hover{
+    background-color: #40c463;
+    cursor: pointer;
+}
+#Lines{
+    display: inline-flex;
+    background-color: #0d1117;
+    color:white;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+}
+#imglogo{
+    display: flex;
+    position:absolute;
+    background-color: #30363d;
+}
+@media(min-width:1024px){
+    .logo{
+        left: 5%;
+        top: 1.5%;
+        font-size: 2em;
+    }
+    #imglogo{
+        left: -35%;
+        top: -17% !important;
+        border: 3px solid none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+    .Choice_In{
+        position: relative;
+        left: 80%;
+    }
+    textarea{
+        width: 50%;
+        height: 75%;
+    }
+    section button{
+        left:50%;
+        transform: translateX(-50%);
+        width: 10%;
+    }
+    #Lines{
+        position: absolute;
+        left: 50%;
+        top:13.5%;
+        margin-top:2px;
+        padding: 2px 10px 1.8px 10px;
+        transform: translate(-50% , -13.5%);
+    }
+}
+@media(max-width:1024px){
+    .logo{
+        left: 2.5%;
+        top: 1.5%;
+        font-size: 2em;
+    }       
+    #imglogo{
+        display: none;
+    }
+    .Choice_In{
+        position: relative;
+        left: 60%;
+    }
+    textarea{
+        width: 60%;
+        height: 75%;
+    }
+    section button{
+        left:50%;
+        transform: translateX(-50%);
+        width: 25%;
+    }
+    #Lines{
+        position: absolute;
+        left: 50%;
+        top:13.5%;
+        margin-top:5px;
+        margin-bottom: 3px;
+        padding: 0px 10px 1px 10px;
+        transform: translate(-50% , -13.5%);
+    }
+}
+@media(max-width: 600px){
+    .Choice_In{
+        position: relative;
+        left: 40%;
+    }
+    #imglogo{
+        display: none;
+    }
+}
