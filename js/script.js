@@ -6,7 +6,7 @@ function func(event){
         document.getElementById("Lines").remove();
     }
     let header = document.querySelector("header");
-    var rows = document.querySelector('textarea').value.split("\n").length;
+    var rows = document.querySelector('textarea').value.split("\n").length--;
     div_insert.insertAdjacentHTML("afterbegin" , `<div id="Lines">Строк: ${rows}</div>`);
     let value = document.querySelector("textarea");
     value.addEventListener("keydown" , function(event){
