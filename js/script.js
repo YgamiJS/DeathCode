@@ -1,5 +1,10 @@
 "use strict";
-
+ document.querySelector.addEventListener("keydown" , function(event){
+        if(event.code == "Tab"){
+            value.value = value.value += "    ";
+            event.preventDefault();
+        }
+    });
 function func(event){
     
     if(document.getElementById("Lines")){
@@ -9,12 +14,6 @@ function func(event){
     var rows = document.querySelector('textarea').value.split("\n").length--;
     div_insert.insertAdjacentHTML("afterbegin" , `<div id="Lines">Строк: ${rows}</div>`);
     let value = document.querySelector("textarea");
-    value.addEventListener("keydown" , function(event){
-        if(event.code == "Tab"){
-            value.value = value.value += "    ";
-            event.preventDefault();
-        }
-    });
 
     try{
         eval(value.value);
