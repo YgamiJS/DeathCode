@@ -1,5 +1,5 @@
 "use strict";
- document.querySelector.addEventListener("keydown" , function(event){
+ document.querySelector("textarea").addEventListener("keydown" , function(event){
         if(event.code == "Tab"){
             value.value = value.value += "    ";
             event.preventDefault();
