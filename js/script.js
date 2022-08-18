@@ -1,6 +1,6 @@
 "use strict";
 
-function func(){
+function func(event){
     
     if(document.getElementById("Lines")){
         document.getElementById("Lines").remove();
@@ -8,10 +8,15 @@ function func(){
     let header = document.querySelector("header");
     var rows = document.querySelector('textarea').value.split("\n").length;
     div_insert.insertAdjacentHTML("afterbegin" , `<div id="Lines">Строк: ${rows}</div>`);
-    let value = document.querySelector("textarea").value;
+    let value = document.querySelector("textarea");
+    value.addEventListener("keydown" , function(event){
+        if(event.code == "Tab"){
+            value.value = value.value += "    ";
+        }
+    });
 
     try{
-        eval(value);
+        eval(value.value);
         header.style.backgroundColor = "#238636";
         setTimeout( () => header.style.backgroundColor = "" , 1000);
     }catch(error){
