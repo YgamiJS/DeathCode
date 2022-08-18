@@ -11,8 +11,8 @@ function func(event){
     let value = document.querySelector("textarea");
     value.addEventListener("keydown" , function(event){
         if(event.code == "Tab"){
-            event.preventDefault();
             value.value = value.value += "    ";
+            event.preventDefault();
         }
     });
 
