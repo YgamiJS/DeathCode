@@ -1,5 +1,6 @@
 "use strict";
- document.querySelector("textarea").addEventListener("keydown" , function(event){
+ let value = document.querySelector("textarea");
+value.addEventListener("keydown" , function(event){
         if(event.code == "Tab"){
             value.value = value.value += "    ";
             event.preventDefault();
@@ -13,7 +14,6 @@ function func(event){
     let header = document.querySelector("header");
     var rows = document.querySelector('textarea').value.split("\n").length--;
     div_insert.insertAdjacentHTML("afterbegin" , `<div id="Lines">Строк: ${rows}</div>`);
-    let value = document.querySelector("textarea");
 
     try{
         eval(value.value);
