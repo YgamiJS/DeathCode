@@ -1,6 +1,6 @@
 "use strict";
  let value = document.querySelector("textarea");
-value.addEventListener("keydown" , function(event){
+value.onkeydown = function(event){
         if(event.code == "Tab"){
             value.value = value.value += "    ";
             event.preventDefault();
