@@ -1,11 +1,11 @@
 "use strict";
- let value = document.querySelector("textarea");
+ /*let value = document.querySelector("textarea");
 value.onkeydown = function(event){
         if(event.code == "Tab"){
             value.value = value.value += "    ";
             event.preventDefault();
         }
-    });
+    });*/
 function func(event){
     
     if(document.getElementById("Lines")){
