@@ -14,7 +14,7 @@ function func(event){
     let header = document.querySelector("header");
     var rows = document.querySelector('textarea').value.split("\n").length--;
     div_insert.insertAdjacentHTML("afterbegin" , `<div id="Lines">Строк: ${rows}</div>`);
-
+    let value = document.querySelector("textarea");
     try{
         eval(value.value);
         header.style.backgroundColor = "#238636";
